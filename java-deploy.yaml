@@ -12,6 +12,7 @@ spec:
       labels:
         app: java-example
     spec:
+      serviceAccountName: veena
       imagePullSecrets:
         - name: ecr-key
       containers:
