@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata:
-  name: javaapp-deployment
+  name: java-example
 spec:
   selector:
     matchLabels:
-      app: javaapp
+      app: java-example
   replicas: 2 
   template:
     metadata:
       labels:
-        app: javaapp
+        app: java-example
     spec:
       imagePullSecrets:
         - name: ecr-key
       containers:
-        - name: javaapp
+        - name: java-example
           image: 209479277669.dkr.ecr.ap-south-1.amazonaws.com/sept-2024:java-example
           imagePullPolicy: Always
           ports:
