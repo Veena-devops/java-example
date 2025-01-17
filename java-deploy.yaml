@@ -14,10 +14,11 @@ spec:
     spec:
       serviceAccountName: veena
       imagePullSecrets:
-        - name: ecr-key
+        - name: ecr-new-key
       containers:
         - name: java-example
           image: 209479277669.dkr.ecr.ap-south-1.amazonaws.com/sept-2024:java-example
+          command: ["/bin/sh","-c","sleep infinity"]
           imagePullPolicy: Always
           ports:
             - containerPort: 80
